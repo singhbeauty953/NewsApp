@@ -3,7 +3,7 @@ import React, { useState } from 'react'
 import Navbar from './components/Navbar';
 import News from './components/News';
 import {
-  BrowserRouter as Router,
+  HashRouter as Router,
   Routes,
   Route
 } from "react-router-dom";
@@ -25,8 +25,8 @@ const App = ()=>{
         height={4}
         progress={progress}
       />
-        <Routes>
-          <Route path="/" element = {<News setProgress= {setprogress}  key="general" pageSize={6} country = "in" category = "general"/>}/>
+        <Routes basename = "/NewsApp">
+          <Route path="/NewsApp" element = {<News setProgress= {setprogress}  key="general" pageSize={6} country = "in" category = "general"/>}/>
           <Route path="/business" element= {<News setProgress= {setprogress}   key="business" pageSize={6} country = "in" category = "business"/>}/>
           <Route path="/entertainment" element= {<News setProgress= {setprogress}   key="entertainment" pageSize={6} country = "in" category = "entertainment"/>}/>
           <Route path="/general" element= {<News setProgress= {setprogress}   key="general" pageSize={6} country = "in" category = "general"/>}/>
