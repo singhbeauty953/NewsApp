@@ -25,7 +25,7 @@ const App = ()=>{
         height={4}
         progress={progress}
       />
-        <Routes basename = "/NewsApp">
+        <Routes Basename = {process.env.PUBLIC_URL}>
           <Route path="/NewsApp" element = {<News setProgress= {setprogress}  key="general" pageSize={6} country = "in" category = "general"/>}/>
           <Route path="/business" element= {<News setProgress= {setprogress}   key="business" pageSize={6} country = "in" category = "business"/>}/>
           <Route path="/entertainment" element= {<News setProgress= {setprogress}   key="entertainment" pageSize={6} country = "in" category = "entertainment"/>}/>
